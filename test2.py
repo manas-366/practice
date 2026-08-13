@@ -4,17 +4,17 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 
-
-@pytest.fixture(scope='class')
-def init(request):
-    driver = webdriver.Chrome()
-    request.cls.driver = driver
-    driver.maximize_window()
-    driver.implicitly_wait(5)
-    yield driver
-    driver.quit()
-
 class Test_page:
+    @pytest.fixture(scope='class')
+    def init(request):
+        driver = webdriver.Chrome()
+        request.cls.driver = driver
+        driver.maximize_window()
+        driver.implicitly_wait(5)
+        yield driver
+        driver.quit()
+
+
     def test_one(self, init):
         # driver is provided by the `init` fixture and attached to the test class
         self.driver.maximize_window()
