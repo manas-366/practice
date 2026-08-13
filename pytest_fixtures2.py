@@ -13,7 +13,7 @@ def setup(request):
     driver.quit()
 
 
-class Test_sample:
+
     def test_one(self, setup):
         self.driver.get('https://www.flipkart.com/')
         assert "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!" in setup.title
