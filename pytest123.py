@@ -18,3 +18,4 @@ def test2():
 
 def test3(Setup):
     print('run again after setup function')
+    "push"
