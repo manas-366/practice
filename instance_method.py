@@ -12,5 +12,3 @@ print("id of s2 data=",id (s2))
 s2.read_stud()
 print("id of s2 data=",id (s2))
 s3.read_stud()
-"try"
-"tttt"
